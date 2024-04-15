@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/height_80x"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/padding_10x"
+        android:paddingTop="@dimen/padding_5x"
+        android:paddingEnd="@dimen/padding_10x"
+        android:paddingBottom="@dimen/padding_5x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/width_50x"
+            android:layout_height="@dimen/height_50x"
+            android:layout_marginEnd="@dimen/margin_10x"
+            android:padding="@dimen/padding_5x" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_4x"
+                android:text="@string/profile_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_sub_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_4x"
+                android:text="@string/host"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_1x"
+        android:background="@color/whiteSmoke"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_chat_two"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/bg_with_rounded_light_blue"
+        android:scaleType="fitXY"
+        app:layout_constraintCircleRadius="@dimen/width_50x"
+        app:layout_constraintStart_toEndOf="@+id/iv_chat_one"
+        app:layout_constraintTop_toTopOf="@+id/iv_chat_one" />
+
+
+    <ImageView
+        android:id="@+id/iv_chat_three"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/bg_with_rounded_white"
+        android:padding="@dimen/padding_5x"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_chat_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_chat_two"
+        app:layout_constraintTop_toTopOf="@+id/iv_chat_two" />
+
+    <ImageView
+        android:id="@+id/iv_chat_four"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_with_rounded_light_blue"
+        android:padding="@dimen/padding_5x"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_chat_one"
+        app:layout_constraintEnd_toEndOf="@+id/iv_chat_two"
+        app:layout_constraintStart_toStartOf="@+id/iv_chat_two"
+        app:layout_constraintTop_toBottomOf="@+id/iv_chat_two" />
+
+    <ImageView
+        android:id="@+id/iv_chat_five"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/bg_ash_with_rounded_black"
+        android:padding="@dimen/padding_5x"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_chat_four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_chat_three"
+        app:layout_constraintTop_toBottomOf="@+id/iv_chat_three" />
+
+    <ImageView
+        android:id="@+id/iv_chat_one"
+        android:layout_width="167dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/bg_ash_with_rounded_black"
+        android:padding="@dimen/padding_5x"
+        android:scaleType="fitCenter"
+        android:src="@drawable/person_two"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_toolbar"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height__350"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_with_rounded_white"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/iv_chat_five"
+        app:layout_constraintStart_toStartOf="@+id/iv_chat_one"
+        app:layout_constraintTop_toBottomOf="@+id/iv_chat_four"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_50x"
+            android:background="@drawable/bg_ash_with_rounded_app_color"
+            android:gravity="start|center"
+            android:paddingStart="@dimen/height_5x"
+            android:text="@string/comments"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_chatList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:listitem="@layout/comment_list_adapter">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/play"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/rv_chatList"
+            app:layout_constraintEnd_toEndOf="@+id/rv_chatList"
+            app:layout_constraintStart_toStartOf="@+id/rv_chatList"
+            app:layout_constraintTop_toTopOf="@+id/rv_chatList" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_person_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.922"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rv_chatList"
+            app:layout_constraintVertical_bias="0.944"
+            app:srcCompat="@drawable/baseline_card_giftcard_24" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/width_50x"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_with_rounded_light_blue"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_10x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center|start"
+            android:text="@string/send_message">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/baseline_send_24"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout">
+
+    </ImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

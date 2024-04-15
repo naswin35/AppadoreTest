@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mechine Test</string>
+    <string name="profile_name">Esther howard</string>
+    <string name="host">Host</string>
+    <string name="send_message">Send Message</string>
+    <string name="comments">Comments</string>
+</resources>
